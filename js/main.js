@@ -16,6 +16,13 @@
 
   var app = new Vue({
     el: "#lawyers-list",
-    data: appData
+    data: appData,
+    filters: {
+      nameOrOrganization: function (lawyer) {
+        if (!lawyer) return '';
+        if (lawyer.first_name && lawyer.last_name) return lawyer.first_name + ' ' + lawyer.last_name;
+        return lawyer.organization || '';
+      }
+    }
   });
 }(jQuery, Vue));

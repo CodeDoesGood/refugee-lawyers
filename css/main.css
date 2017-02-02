@@ -20,6 +20,16 @@
   min-height: 81vh;
 }
 
+
+#lawyers-list .lawyer .airport {
+    width: 10%;
+}
+
+#lawyers-list .lawyer .city,
+#lawyers-list .lawyer .phone {
+  width: 25%;
+}
+
 /*
   footer
 */
