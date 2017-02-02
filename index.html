@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Stranded Refugees in the US</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,37 +9,60 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- RL CSS  -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
+
 <body>
 
-  <div class="container">
+    <nav class="navbar navbar-default navbar-rl">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    <img alt="Coders Without Borders" class="img-thumbnail" src="img/logoCandidate1.png">
+                </a>
+            </div>
+        </div>
+    </nav>
 
-    <h3>List of Lawyers Willing To Help Stranded Refugees at Various US Airports!</h3>
+    <div class="container content">
+        <h3>List of Lawyers Willing To Help Stranded Refugees at Various US Airports!</h3>
 
-    <table id="lawyers-list" class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <td>City</td><td>Airport</td><td>Name</td><td>Phone Number</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="lawyer in lawyers">
-          <td>{{ lawyer.city }}</td>
-          <td>{{ lawyer.airport }}</td>
-          <td><strong>{{ lawyer.name }}</strong></td>
-          <td>{{ lawyer.phone }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+        <table id="lawyers-list" class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <td>City</td>
+                    <td>Airport</td>
+                    <td>Name</td>
+                    <td>Phone Number</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="lawyer in lawyers">
+                    <td>{{ lawyer.city }}</td>
+                    <td>{{ lawyer.airport }}</td>
+                    <td><strong>{{ lawyer.name }}</strong></td>
+                    <td>{{ lawyer.phone }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-  <!-- libs -->
-  <script src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
-  <!-- <script src="js/bootstrap.min.js"></script> -->
-  <script src="js/vue.min.js"></script>
+    <nav class="navbar navbar-default footer-rl">
+        <div class="container">
+            <p class="navbar-text text-center">Coders Without Borders &copy; 2017</p>
+        </div>
+    </nav>
 
-  <!-- core scripts -->
-  <script src="js/main.js" charset="utf-8"></script>
+    <!-- libs -->
+    <script src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/vue.min.js"></script>
+
+    <!-- core scripts -->
+    <script src="js/main.js" charset="utf-8"></script>
 
 </body>
+
 </html>
