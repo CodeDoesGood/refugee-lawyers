@@ -2,9 +2,13 @@
   var appData = { lawyers: [] };
 
   var loadLawyers = function () {
-    $.getJSON('lawyers.json', function (data) {
-      appData.lawyers = data;
-    });
+    $.getJSON('lawyers.json')
+      .done(function (json) {
+        appData.lawyers = json;
+      })
+      .fail(function (jqxhr, status, error) {
+        console.log(status, error);
+      });
   };
 
   // init
