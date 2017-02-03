@@ -1,4 +1,5 @@
-(function ($, Vue) {
+(function ($, Vue, _) {
+
   var appData = { lawyers: [] };
 
   var loadLawyers = function () {
@@ -23,6 +24,12 @@
         if (lawyer.first_name && lawyer.last_name) return lawyer.first_name + ' ' + lawyer.last_name;
         return lawyer.organization || '';
       }
+    },
+    methods: {
+      sortedByCity: function (lawyers) {
+        return _.orderBy(lawyers, ['city'], ['asc']);
+      }
     }
   });
-}(jQuery, Vue));
+
+}(jQuery, Vue, _));

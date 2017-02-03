@@ -39,7 +39,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="lawyer" v-for="lawyer in lawyers">
+                <tr class="lawyer" v-for="lawyer in sortedByCity(lawyers)">
                     <td class="city">{{ lawyer.city }}</td>
                     <td class="airport">{{ lawyer.airport }}</td>
                     <td class="name"><strong>{{ lawyer | nameOrOrganization }}</strong></td>
@@ -57,6 +57,7 @@
 
     <!-- libs -->
     <script src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script src="js/lodash.min.js" charset="utf-8"></script>
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="js/vue.min.js"></script>
 
